@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 int sequentinal_search(int *a,int count,int key){
   int i;
   for (i=0;i<count;i++)
