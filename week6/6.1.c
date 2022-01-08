@@ -5,6 +5,7 @@
 typedef struct{
     char name[30];
     char phonenumber[20];
+    char email[25];
 }address;
 
 struct lisk{
@@ -43,7 +44,7 @@ Node *deHead(Node *head){
 void search(Node *head,char s[],FILE *ptr1){
      while(head!=NULL){
          if (strcmp(head->data.name,s)==0)
-         fprintf(ptr1,"%s  %s",head->data.name,head->data.phonenumber);
+         fprintf(ptr1,"%s  %s %s",head->data.name,head->data.phonenumber,head->data.email);
          head=head->Next;
      }
 }
@@ -54,7 +55,7 @@ int main(){
     FILE *ptr,*ptr1;
     ptr=fopen("new.txt","r");
     ptr1=fopen("file1.txt","w");
-    while(fscanf(ptr,"%s %s ",X.name,X.phonenumber)!=EOF){
+    while(fscanf(ptr,"%s %s %s",X.name,X.phonenumber,X.email)!=EOF){
        head=addhead(head,X);
     }
     printf("Nhap ten can tim kiem:");
@@ -64,10 +65,4 @@ int main(){
     fclose(ptr);
     fclose(ptr1);
     return 0;
-
-   
-    
-    
-    
-    
 }
