@@ -17,7 +17,7 @@ BST *createnewnode(char a){
          newnode->Left_child=NULL;
          newnode->Right_child=NULL;
          newnode->inf=a;
-     }
+     } 
  return newnode;
 }
 void PreOrder(BST *r){
