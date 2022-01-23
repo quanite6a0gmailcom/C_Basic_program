@@ -23,6 +23,8 @@ int Binary_Search(int a[],int X){
 int main(){
     int a[100];
     int i=0;
+    time_t start,start1,end,end1;
+    double time_use,time_use1;
     for (i=0;i<100;i++)
     a[i]=i;
     if(Binary_Search(a,12)!=-1){
