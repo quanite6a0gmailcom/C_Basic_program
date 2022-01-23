@@ -23,7 +23,7 @@ int Binary_Search(int a[],int X){
 }
 int recursive_BinarySearch(int a[],int X,int Low,int high){
     int mid;
-    if (low>high) return -1;
+    if (Low>high) return -1;
     mid=(Low+high)/2;
     if (a[mid]<X) return recursive_BinarySearch(a,X,mid+1,high);
     else if (a[mid]>X) return recursive_BinarySearch(a,X,Low,mid-1);
@@ -55,6 +55,7 @@ int main(){
         printf("Khong tim thay!!!\n");
     }
     end1=clock();
+    time_use1=(double)(end1-start1)/CLOCKS_PER_SEC;
     printf("THoi gian chay vs de quy la:%f",time_use);
     printf("\nTHoi gian chay khong de quy la:%f",time_use1);
     return 0;
